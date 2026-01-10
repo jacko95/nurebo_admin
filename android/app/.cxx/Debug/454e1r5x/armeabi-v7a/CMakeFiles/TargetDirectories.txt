@@ -1,0 +1,2 @@
+C:/Users/Domenico/AndroidStudioProjects/nurebo_admin/android/app/.cxx/Debug/454e1r5x/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Domenico/AndroidStudioProjects/nurebo_admin/android/app/.cxx/Debug/454e1r5x/armeabi-v7a/CMakeFiles/rebuild_cache.dir
