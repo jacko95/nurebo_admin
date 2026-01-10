@@ -22,4 +22,5 @@ class Utils {
   // static final version_name = packageInfo.version;
   static String businessChatRoomOpen = "";
   static int timezoneOffset = DateTime.now().timeZoneOffset.inHours;
+
 }
