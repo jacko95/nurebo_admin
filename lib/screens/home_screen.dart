@@ -735,7 +735,7 @@ class _HomeScreenState extends State<HomeScreen> {
           businessProvider.setBusiness(business);
           // } catch (e) {
         } on TimeoutException catch (e) {
-          // print('un dio che prima dd5dd5d5d5 un cane');
+          // print('un che prima dd5dd5d5d5 un cane');
           // print(e);
           // isServerDown = true;
         }

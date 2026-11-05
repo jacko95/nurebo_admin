@@ -735,7 +735,7 @@ class _HomeScreenState extends State<HomeScreen> {
           businessProvider.setBusiness(business);
           // } catch (e) {
         } on TimeoutException catch (e) {
-          // print('un dio che prima dd5dd5d5d5 un cane');
+          // print('un che prima dd5dd5d5d5 un ');
           // print(e);
           // isServerDown = true;
         }
@@ -806,35 +806,35 @@ class _HomeScreenState extends State<HomeScreen> {
 
             /**/
             //todo: deselezionate per reservation app
-            // socketProvider.getUnseenLocalNotifications(businessProvider.business!, context),
-            // socketProvider.getLocalNotifications(businessProvider.business!),
-            // businessProvider.getBusinessSettings(/*businessProvider.business*/),
-            // prestazioneProvider.getAllBusinessPrestazioni(businessProvider.business!.id, context),
-            // eventProvider.getAllBusinessEvents(businessProvider.business!.id, context),
-            // eventProvider.getAllBusinessEventTickets(businessProvider.business!.id, context),
-            // vetrinaProvider.getAllRecommendedPrestazione(businessProvider.business!.id, context),
-            // socketProvider.getAllChatRoomMessages(context),
-            // d = businessProvider.getDateBusinessTimetable().then((value) {
-            //   // setState(() {
-            //   //   businessProvider.business!.bookingBusinessTimetable = value;
-            //   // });
-            //
-            //   businessProvider.business!.bookingBusinessTimetable!.sort((a, b) {
-            //     if(a['weekday_id'] == b['weekday_id']) {
-            //       if(int.tryParse(a['open_at_hour']) == int.tryParse(b['open_at_hour'])) {
-            //         if(int.tryParse(a['open_at_minute']) == int.tryParse(b['open_at_minute'])) {
-            //           if(int.tryParse(a['close_at_hour']) == int.tryParse(b['close_at_hour'])) {
-            //             return int.tryParse(a['close_at_minute'])!.compareTo(int.tryParse(b['close_at_minute'])!);
-            //           }
-            //           return int.tryParse(a['close_at_hour'])!.compareTo(int.tryParse(b['close_at_hour'])!);
-            //         }
-            //         return int.tryParse(a['open_at_minute'])!.compareTo(int.tryParse(b['open_at_minute'])!);
-            //       }
-            //       return int.tryParse(a['open_at_hour'])!.compareTo(int.tryParse(b['open_at_hour'])!);
-            //     }
-            //     return a['weekday_id'].compareTo(b['weekday_id']);
-            //   });
-            // }),
+            socketProvider.getUnseenLocalNotifications(businessProvider.business!, context),
+            socketProvider.getLocalNotifications(businessProvider.business!),
+            businessProvider.getBusinessSettings(/*businessProvider.business*/),
+            prestazioneProvider.getAllBusinessPrestazioni(businessProvider.business!.id, context),
+            eventProvider.getAllBusinessEvents(businessProvider.business!.id, context),
+            eventProvider.getAllBusinessEventTickets(businessProvider.business!.id, context),
+            vetrinaProvider.getAllRecommendedPrestazione(businessProvider.business!.id, context),
+            socketProvider.getAllChatRoomMessages(context),
+            d = businessProvider.getDateBusinessTimetable().then((value) {
+              // setState(() {
+              //   businessProvider.business!.bookingBusinessTimetable = value;
+              // });
+
+              businessProvider.business!.bookingBusinessTimetable!.sort((a, b) {
+                if(a['weekday_id'] == b['weekday_id']) {
+                  if(int.tryParse(a['open_at_hour']) == int.tryParse(b['open_at_hour'])) {
+                    if(int.tryParse(a['open_at_minute']) == int.tryParse(b['open_at_minute'])) {
+                      if(int.tryParse(a['close_at_hour']) == int.tryParse(b['close_at_hour'])) {
+                        return int.tryParse(a['close_at_minute'])!.compareTo(int.tryParse(b['close_at_minute'])!);
+                      }
+                      return int.tryParse(a['close_at_hour'])!.compareTo(int.tryParse(b['close_at_hour'])!);
+                    }
+                    return int.tryParse(a['open_at_minute'])!.compareTo(int.tryParse(b['open_at_minute'])!);
+                  }
+                  return int.tryParse(a['open_at_hour'])!.compareTo(int.tryParse(b['open_at_hour'])!);
+                }
+                return a['weekday_id'].compareTo(b['weekday_id']);
+              });
+            }),
             /**/
           ]).then((value) {
             // FlutterNativeSplash.remove();

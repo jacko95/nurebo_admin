@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:nurebo_admin/main.dart';
 
 class Utils {
-  static final String httpServerUrl = "http://192.168.1.6:5000/";
+  static final String httpServerUrl = "http://192.168.1.10:5000/";
   // static const String httpServerUrl = "https://api.nurebo.com/";
   // static const String httpServerUrl = "https://clexira.online/";
   // static const String httpServerUrl = "https://dev.nurebo.com/";
@@ -15,8 +15,8 @@ class Utils {
   // static const String httpServerUrl = "https://www.pleunia.com/api/v1/";
   // static final String httpServerUrl = "kadingira-lb-999907811.eu-central-1.elb.amazonaws.com/";
   // static int connectedSockets = 0;
-  static const version_id = 196;
-  static final version_name = '0.1.7';
+  static const version_id = 197;
+  static final version_name = '0.1.8';
   static final bool isDev = true;
   static const int maxCampaignPerWeek = 2;
   // static final version_name = packageInfo.version;

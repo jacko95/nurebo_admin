@@ -2961,7 +2961,8 @@ class _BookingBusinessProfileScreenState extends State<BookingBusinessProfileScr
                                               child: FutureImage(
                                                 // widget.bookingBusiness.profile_image,
                                                 // widget.prestazione.business.profile_image,
-                                                widget.business!.category!.image!,
+                                                // widget.business!.category!.image!,
+                                                widget.business?.category?.image ?? '',
                                                 // "https://images.pexels.com/photos/6476116/pexels-photo-6476116.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
                                                 width: 20,
                                                 height: 20,
@@ -2973,7 +2974,8 @@ class _BookingBusinessProfileScreenState extends State<BookingBusinessProfileScr
                                                   children: <TextSpan>[
                                                     TextSpan(
                                                       // text: 'Estetista'/*' "'*/,
-                                                        text: widget.business!.category!.name,
+                                                      //   text: widget.business!.category!.name,
+                                                        text: widget.business?.category?.name ?? '',
                                                         // text: '€ ' + NumberFormat.currency(
                                                         //   // customPattern: '#,##',
                                                         //   locale: 'IT_it',

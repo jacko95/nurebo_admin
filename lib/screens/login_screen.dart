@@ -555,216 +555,216 @@ class _LoginScreenState extends State<LoginScreen> {
                           // ),
                         ) : Container(height: MediaQuery.of(context).size.height * 0.07,),
 
-                        // Visibility(
-                        //   visible: false,
-                        //   child: Padding(
-                        //     padding: EdgeInsets.only(
-                        //         left: MediaQuery.of(context).size.width * 0.09,
-                        //         right: MediaQuery.of(context).size.width * 0.09,
-                        //         // top: 30
-                        //     ),
-                        //     child: TextFormField(
-                        //       // onChanged: (email) => existsEmail(email),
-                        //       onChanged: (email) /*=>*/ async {
-                        //         setState(() {
-                        //           _isEmail = EmailValidator.validate(email) && email.isEmail();
-                        //         });
-                        //         // if(!EmailValidator.valibooking(email)){
-                        //         // if(emailTextController.text.toString().isEmail()){
-                        //         if(_isEmail == false){
-                        //           // print('porcodio');
-                        //           //
-                        //           // setState(() {
-                        //           //   _isEmail = true;
-                        //           // });
-                        //           // await existsEmail(email);
-                        //         }
-                        //         else{
-                        //           // Fluttertoast.showToast(
-                        //           //     msg: "Valid Email",
-                        //           //     toastLength: Toast.LENGTH_SHORT,
-                        //           //     gravity: ToastGravity.TOP,
-                        //           //     timeInSecForIosWeb: 1,
-                        //           //     fontSize: 16.0
-                        //           // );
-                        //         }
-                        //       },
-                        //       controller: emailController,
-                        //       autofillHints: [AutofillHints.email],
-                        //       // validator: (email) => email != null && !EmailValidator.valibooking(email)
-                        //       //     ? 'Enter a valid email'
-                        //       //     : null,
-                        //       keyboardType: TextInputType.emailAddress,
-                        //       // enabled: true,
-                        //       enabled: isSendClicked ? false : true,
-                        //       enableInteractiveSelection: true,
-                        //       /*onChanged: (_) async {
-                        //         // setState(() async {
-                        //         await existsUser();
-                        //         // });
-                        //         print(usernameController.text);
-                        //         print(usernameExists.toString());
-                        //       },*/
-                        //       // onChanged: (password) => onPasswordChanged(password),
-                        //
-                        //       decoration: InputDecoration(
-                        //         filled: true,
-                        //         fillColor: Colors.white,
-                        //         prefixIcon: Padding(
-                        //           padding: const EdgeInsets.only(bottom: 3.0),
-                        //           child: Icon(
-                        //             Icons.mail_outlined,
-                        //             color: Colors.grey[700],
-                        //             size: 21,
-                        //           ),
-                        //         ),
-                        //         suffixIcon: Padding(
-                        //           padding: const EdgeInsets.all(15.0),
-                        //           child: AnimatedContainer(
-                        //             duration: Duration(milliseconds: 0),
-                        //             width: 20,
-                        //             height: 20,
-                        //             decoration: BoxDecoration(
-                        //                 color: emailController.text == '' ? Colors.transparent :
-                        //                 _isEmail
-                        //                     ? Colors.green
-                        //                     : Colors.red,
-                        //   /*                              border: !_isEmail
-                        //                       ? Border.all(color: Colors.transparent)
-                        //                       : Border.all(color: Colors.grey.shade400),*/
-                        //                 border: Border.all(color: Colors.transparent),
-                        //                 // border: Border.all(color: Colors.grey.shade400),
-                        //                 borderRadius: BorderRadius.circular(50)
-                        //             ),
-                        //             child: Center(
-                        //               child: Icon(
-                        //                 !_isEmail ? Icons.clear : Icons.check,
-                        //                 color: emailController.text.isNotEmpty ? Colors.white : Colors.transparent,
-                        //                 size: 15,
-                        //               ),
-                        //             ),
-                        //           ),
-                        //         ),
-                        //         border: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             borderSide: BorderSide(color: Colors.black)
-                        //         ),
-                        //         focusedBorder: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             borderSide: BorderSide(color: Colors.black)
-                        //         ),
-                        //         hintText: "Email",
-                        //         contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
-
-
-                        Padding(
-                          padding: EdgeInsets.only(
-                              left: MediaQuery.of(context).size.width * 0.09,
-                              right: MediaQuery.of(context).size.width * 0.09,
-                              // top: 30
-                          ),
-                          child: TextFormField(
-                            // onChanged: (email) => existsEmail(email),
-                            onChanged: (email) /*=>*/ async {
-
-                              setState(() {
-                                // _isPhone = PhoneNumber.parse(email, callerCountry: IsoCode.IT).isValid();
-                                _isPhone = isItalianMobileValid(email);
-                              });
-                              // if(!EmailValidator.valibooking(email)){
-                              // if(emailTextController.text.toString().isEmail()){
-                              if(_isPhone == false){
-                                // print('porcodio');
-                                //
-                                // setState(() {
-                                //   _isEmail = true;
+                        Visibility(
+                          visible: true,
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                left: MediaQuery.of(context).size.width * 0.09,
+                                right: MediaQuery.of(context).size.width * 0.09,
+                                // top: 30
+                            ),
+                            child: TextFormField(
+                              // onChanged: (email) => existsEmail(email),
+                              onChanged: (email) /*=>*/ async {
+                                setState(() {
+                                  _isEmail = EmailValidator.validate(email) && email.isEmail();
+                                });
+                                // if(!EmailValidator.valibooking(email)){
+                                // if(emailTextController.text.toString().isEmail()){
+                                if(_isEmail == false){
+                                  // print('po');
+                                  //
+                                  // setState(() {
+                                  //   _isEmail = true;
+                                  // });
+                                  // await existsEmail(email);
+                                }
+                                else{
+                                  // Fluttertoast.showToast(
+                                  //     msg: "Valid Email",
+                                  //     toastLength: Toast.LENGTH_SHORT,
+                                  //     gravity: ToastGravity.TOP,
+                                  //     timeInSecForIosWeb: 1,
+                                  //     fontSize: 16.0
+                                  // );
+                                }
+                              },
+                              controller: emailController,
+                              autofillHints: [AutofillHints.email],
+                              // validator: (email) => email != null && !EmailValidator.valibooking(email)
+                              //     ? 'Enter a valid email'
+                              //     : null,
+                              keyboardType: TextInputType.emailAddress,
+                              // enabled: true,
+                              enabled: isSendClicked ? false : true,
+                              enableInteractiveSelection: true,
+                              /*onChanged: (_) async {
+                                // setState(() async {
+                                await existsUser();
                                 // });
-                                // await existsEmail(email);
-                              }
-                              else{
-                                // Fluttertoast.showToast(
-                                //     msg: "Valid Email",
-                                //     toastLength: Toast.LENGTH_SHORT,
-                                //     gravity: ToastGravity.TOP,
-                                //     timeInSecForIosWeb: 1,
-                                //     fontSize: 16.0
-                                // );
-                              }
-                            },
-                            controller: phoneController,
-                            autofillHints: [AutofillHints.telephoneNumber],
-                            // validator: (email) => email != null && !EmailValidator.valibooking(email)
-                            //     ? 'Enter a valid email'
-                            //     : null,
-                            keyboardType: TextInputType.phone,
-                            // enabled: true,
-                            enabled: isSendClicked ? false : true,
-                            enableInteractiveSelection: true,
-                            /*onChanged: (_) async {
-                              // setState(() async {
-                              await existsUser();
-                              // });
-                              print(usernameController.text);
-                              print(usernameExists.toString());
-                            },*/
-                            // onChanged: (password) => onPasswordChanged(password),
+                                print(usernameController.text);
+                                print(usernameExists.toString());
+                              },*/
+                              // onChanged: (password) => onPasswordChanged(password),
 
-                            decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              prefixIcon: Padding(
-                                padding: const EdgeInsets.only(bottom: 3.0),
-                                child: Icon(
-                                  // Icons.phone,
-                                  Icons.mail_outline,
-                                  color: Colors.grey[700],
-                                  size: 21,
-                                ),
-                              ),
-                              suffixIcon: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: AnimatedContainer(
-                                  duration: Duration(milliseconds: 0),
-                                  width: 20,
-                                  height: 20,
-                                  decoration: BoxDecoration(
-                                      color: phoneController.text == '' ? Colors.transparent :
-                                      _isPhone
-                                          ? Colors.green
-                                          : Colors.red,
-/*                              border: !_isEmail
-                                            ? Border.all(color: Colors.transparent)
-                                            : Border.all(color: Colors.grey.shade400),*/
-                                      border: Border.all(color: Colors.transparent),
-                                      // border: Border.all(color: Colors.grey.shade400),
-                                      borderRadius: BorderRadius.circular(50)
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                prefixIcon: Padding(
+                                  padding: const EdgeInsets.only(bottom: 3.0),
+                                  child: Icon(
+                                    Icons.mail_outlined,
+                                    color: Colors.grey[700],
+                                    size: 21,
                                   ),
-                                  child: Center(
-                                    child: Icon(
-                                      !_isPhone ? Icons.clear : Icons.check,
-                                      color: phoneController.text.isNotEmpty ? Colors.white : Colors.transparent,
-                                      size: 15,
+                                ),
+                                suffixIcon: Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: AnimatedContainer(
+                                    duration: Duration(milliseconds: 0),
+                                    width: 20,
+                                    height: 20,
+                                    decoration: BoxDecoration(
+                                        color: emailController.text == '' ? Colors.transparent :
+                                        _isEmail
+                                            ? Colors.green
+                                            : Colors.red,
+                          /*                              border: !_isEmail
+                                              ? Border.all(color: Colors.transparent)
+                                              : Border.all(color: Colors.grey.shade400),*/
+                                        border: Border.all(color: Colors.transparent),
+                                        // border: Border.all(color: Colors.grey.shade400),
+                                        borderRadius: BorderRadius.circular(50)
+                                    ),
+                                    child: Center(
+                                      child: Icon(
+                                        !_isEmail ? Icons.clear : Icons.check,
+                                        color: emailController.text.isNotEmpty ? Colors.white : Colors.transparent,
+                                        size: 15,
+                                      ),
                                     ),
                                   ),
                                 ),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(color: Colors.black)
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(color: Colors.black)
+                                ),
+                                hintText: "Email",
+                                contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                               ),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(color: Colors.black)
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(color: Colors.black)
-                              ),
-                              hintText: "Inserisci il tuo numero",
-                              contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                             ),
                           ),
                         ),
+
+
+//                         Padding(
+//                           padding: EdgeInsets.only(
+//                               left: MediaQuery.of(context).size.width * 0.09,
+//                               right: MediaQuery.of(context).size.width * 0.09,
+//                               // top: 30
+//                           ),
+//                           child: TextFormField(
+//                             // onChanged: (email) => existsEmail(email),
+//                             onChanged: (email) /*=>*/ async {
+//
+//                               setState(() {
+//                                 // _isPhone = PhoneNumber.parse(email, callerCountry: IsoCode.IT).isValid();
+//                                 _isPhone = isItalianMobileValid(email);
+//                               });
+//                               // if(!EmailValidator.valibooking(email)){
+//                               // if(emailTextController.text.toString().isEmail()){
+//                               if(_isPhone == false){
+//                                 // print('opp');
+//                                 //
+//                                 // setState(() {
+//                                 //   _isEmail = true;
+//                                 // });
+//                                 // await existsEmail(email);
+//                               }
+//                               else{
+//                                 // Fluttertoast.showToast(
+//                                 //     msg: "Valid Email",
+//                                 //     toastLength: Toast.LENGTH_SHORT,
+//                                 //     gravity: ToastGravity.TOP,
+//                                 //     timeInSecForIosWeb: 1,
+//                                 //     fontSize: 16.0
+//                                 // );
+//                               }
+//                             },
+//                             controller: phoneController,
+//                             autofillHints: [AutofillHints.telephoneNumber],
+//                             // validator: (email) => email != null && !EmailValidator.valibooking(email)
+//                             //     ? 'Enter a valid email'
+//                             //     : null,
+//                             keyboardType: TextInputType.phone,
+//                             // enabled: true,
+//                             enabled: isSendClicked ? false : true,
+//                             enableInteractiveSelection: true,
+//                             /*onChanged: (_) async {
+//                               // setState(() async {
+//                               await existsUser();
+//                               // });
+//                               print(usernameController.text);
+//                               print(usernameExists.toString());
+//                             },*/
+//                             // onChanged: (password) => onPasswordChanged(password),
+//
+//                             decoration: InputDecoration(
+//                               filled: true,
+//                               fillColor: Colors.white,
+//                               prefixIcon: Padding(
+//                                 padding: const EdgeInsets.only(bottom: 3.0),
+//                                 child: Icon(
+//                                   // Icons.phone,
+//                                   Icons.mail_outline,
+//                                   color: Colors.grey[700],
+//                                   size: 21,
+//                                 ),
+//                               ),
+//                               suffixIcon: Padding(
+//                                 padding: const EdgeInsets.all(15.0),
+//                                 child: AnimatedContainer(
+//                                   duration: Duration(milliseconds: 0),
+//                                   width: 20,
+//                                   height: 20,
+//                                   decoration: BoxDecoration(
+//                                       color: phoneController.text == '' ? Colors.transparent :
+//                                       _isPhone
+//                                           ? Colors.green
+//                                           : Colors.red,
+// /*                              border: !_isEmail
+//                                             ? Border.all(color: Colors.transparent)
+//                                             : Border.all(color: Colors.grey.shade400),*/
+//                                       border: Border.all(color: Colors.transparent),
+//                                       // border: Border.all(color: Colors.grey.shade400),
+//                                       borderRadius: BorderRadius.circular(50)
+//                                   ),
+//                                   child: Center(
+//                                     child: Icon(
+//                                       !_isPhone ? Icons.clear : Icons.check,
+//                                       color: phoneController.text.isNotEmpty ? Colors.white : Colors.transparent,
+//                                       size: 15,
+//                                     ),
+//                                   ),
+//                                 ),
+//                               ),
+//                               border: OutlineInputBorder(
+//                                   borderRadius: BorderRadius.circular(10),
+//                                   borderSide: BorderSide(color: Colors.black)
+//                               ),
+//                               focusedBorder: OutlineInputBorder(
+//                                   borderRadius: BorderRadius.circular(10),
+//                                   borderSide: BorderSide(color: Colors.black)
+//                               ),
+//                               hintText: "Inserisci il tuo numero",
+//                               contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+//                             ),
+//                           ),
+//                         ),
 
                         // Column(
                         //   crossAxisAlignment: CrossAxisAlignment.start,
@@ -878,76 +878,27 @@ class _LoginScreenState extends State<LoginScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            // Visibility(
-                            //   visible: !isSendClicked,
-                            //   child: Center(
-                            //     child: Container(
-                            //       // height: MediaQuery.of(context).size.height * 0.075,
-                            //       width: MediaQuery.of(context).size.width * 0.75,
-                            //       child: MaterialButton(
-                            //         onPressed: () async {
-                            //           // if(_isUsername && usernameController.text != ''){
-                            //           if(_isEmail && emailController.text != ''){
-                            //             if((await existsEmail(emailController.text)) == true){
-                            //               setState(() {
-                            //                 isSendClicked = true;
-                            //               });
-                            //               await sendEmail();
-                            //             }
-                            //           }
-                            //           else{
-                            //             Fluttertoast.showToast(
-                            //               // msg: 'Email aggiornata a ${widget.user.email}',
-                            //               msg: 'Email non valida',
-                            //               backgroundColor: Colors.grey[700],
-                            //               // )..then((value) => Navigator.pop(context));
-                            //             )/*.then((value) => */;
-                            //           }
-                            //         },
-                            //         // minWidth: MediaQuery.of(context).size.width * 0.6,
-                            //         elevation: 0,
-                            //         // color: Colors.blue[500],
-                            //         color: Colors.blue[500],
-                            //         padding: EdgeInsets.fromLTRB(50, 18, 50, 18),
-                            //         shape: RoundedRectangleBorder(
-                            //             borderRadius: BorderRadius.circular(8)
-                            //         ),
-                            //         // elevation: 0,
-                            //         // padding: EdgeInsets.all(18),
-                            //         // shape: RoundedRectangleBorder(
-                            //         //     borderRadius: BorderRadius.circular(20)
-                            //         // ),
-                            //         child: Center(
-                            //           child: Text(
-                            //             "Accedi tramite Email",
-                            //             style: TextStyle(
-                            //               fontWeight: FontWeight.bold,
-                            //               color: Colors.white
-                            //             ),
-                            //           )
-                            //         ),
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
                             Visibility(
-                              visible: !isSendSMSClicked,
+                              visible: !isSendClicked,
                               child: Center(
                                 child: Container(
                                   // height: MediaQuery.of(context).size.height * 0.075,
                                   width: MediaQuery.of(context).size.width * 0.75,
                                   child: MaterialButton(
                                     onPressed: () async {
-                                      if(/*_isEmail &&*/isItalianMobileValid(phoneController.text)){
-                                        //   setState(() {
-                                        //     isSendSMSClicked = true;
-                                        //   });
-                                        await sendSMS();
+                                      // if(_isUsername && usernameController.text != ''){
+                                      if(_isEmail && emailController.text != ''){
+                                        if((await existsEmail(emailController.text)) == true){
+                                          setState(() {
+                                            isSendClicked = true;
+                                          });
+                                          await sendEmail();
+                                        }
                                       }
-                                      else {
+                                      else{
                                         Fluttertoast.showToast(
                                           // msg: 'Email aggiornata a ${widget.user.email}',
-                                          msg: 'Numero non valido',
+                                          msg: 'Email non valida',
                                           backgroundColor: Colors.grey[700],
                                           // )..then((value) => Navigator.pop(context));
                                         )/*.then((value) => */;
@@ -968,8 +919,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     // ),
                                     child: Center(
                                       child: Text(
-                                        // "Accedi tramite SMS",
-                                        "Invia",
+                                        "Accedi tramite Email",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white
@@ -980,6 +930,56 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
+                            // Visibility(
+                            //   visible: !isSendSMSClicked,
+                            //   child: Center(
+                            //     child: Container(
+                            //       // height: MediaQuery.of(context).size.height * 0.075,
+                            //       width: MediaQuery.of(context).size.width * 0.75,
+                            //       child: MaterialButton(
+                            //         onPressed: () async {
+                            //           if(/*_isEmail &&*/isItalianMobileValid(phoneController.text)){
+                            //             //   setState(() {
+                            //             //     isSendSMSClicked = true;
+                            //             //   });
+                            //             await sendSMS();
+                            //           }
+                            //           else {
+                            //             Fluttertoast.showToast(
+                            //               // msg: 'Email aggiornata a ${widget.user.email}',
+                            //               msg: 'Numero non valido',
+                            //               backgroundColor: Colors.grey[700],
+                            //               // )..then((value) => Navigator.pop(context));
+                            //             )/*.then((value) => */;
+                            //           }
+                            //         },
+                            //         // minWidth: MediaQuery.of(context).size.width * 0.6,
+                            //         elevation: 0,
+                            //         // color: Colors.blue[500],
+                            //         color: Colors.blue[500],
+                            //         padding: EdgeInsets.fromLTRB(50, 18, 50, 18),
+                            //         shape: RoundedRectangleBorder(
+                            //             borderRadius: BorderRadius.circular(8)
+                            //         ),
+                            //         // elevation: 0,
+                            //         // padding: EdgeInsets.all(18),
+                            //         // shape: RoundedRectangleBorder(
+                            //         //     borderRadius: BorderRadius.circular(20)
+                            //         // ),
+                            //         child: Center(
+                            //           child: Text(
+                            //             // "Accedi tramite SMS",
+                            //             "Invia",
+                            //             style: TextStyle(
+                            //               fontWeight: FontWeight.bold,
+                            //               color: Colors.white
+                            //             ),
+                            //           )
+                            //         ),
+                            //       ),
+                            //     ),
+                            //   ),
+                            // ),
                             SizedBox(
                               height: 15,
                             ),

@@ -951,7 +951,7 @@ class _BusinessSettingsScreenState extends State<BusinessSettingsScreen> {
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width * .48,
-                        height: (businessProvider.business!.bookingBusinessTimetable!.length * 20 + (20)).toDouble(),
+                        height: (businessProvider.business!.bookingBusinessTimetable?.length ?? 0 * 20 + (20)).toDouble(),
                         padding: EdgeInsets.only(
                             right: 15,
                             left: 15
@@ -968,7 +968,7 @@ class _BusinessSettingsScreenState extends State<BusinessSettingsScreen> {
                                   return SizedBox(height: 4,);
                                 },
                                 shrinkWrap: true,
-                                itemCount: businessProvider.business!.bookingBusinessTimetable!.length,
+                                itemCount: businessProvider.business!.bookingBusinessTimetable?.length ?? 0,
                                 physics: NeverScrollableScrollPhysics(),
                                 itemBuilder: (context, i){
                                   if(businessProvider.business!.bookingBusinessTimetable![i]['weekday_id'] == 1){

@@ -33,6 +33,7 @@ import 'package:nurebo_admin/provider/vetrina_provider.dart';
 import 'package:nurebo_admin/screens/booking_detail_screen.dart';
 import 'package:nurebo_admin/screens/booking_screen.dart';
 import 'package:nurebo_admin/screens/home_screen1.dart';
+// import 'package:nurebo_admin/screens/home_screen.dart';
 import 'package:nurebo_admin/screens/login_screen.dart';
 import 'package:nurebo_admin/screens/news_screen.dart';
 import 'package:nurebo_admin/screens/server_down_screen.dart';
@@ -740,7 +741,7 @@ Future main() async {
     business = await (getBusiness());
     // } catch (e) {
   } on TimeoutException catch (e) {
-    print('un dio che prima dd5dd5d5d5 un cane');
+    print('un che prima dd5dd5d5d5 un ');
     print(e);
     // if(BusinessPreferences.getIsLogged()!){
       isServerDown = true;
@@ -959,42 +960,45 @@ class _NureboAdminState extends State<NureboAdmin> with WidgetsBindingObserver {
 
 
     // return MaterialApp(
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {
-        '/home': (context) => HomeScreen(),
-        // '/second': (context) => SecondScreen(),
-      },
-      navigatorObservers: [routeObserver],
-      navigatorKey: navigatorKey,
-      scaffoldMessengerKey: snackbarKey,
-      title: NureboAdmin.title,
-      // localizationsDelegates: GlobalMaterialLocalizations.delegates,
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        // Locale('en', ''),
-        // Locale('en', 'US'),
-        // Locale('zh', ''),
-        // Locale('he', ''),
-        // Locale('es', ''),
-        // Locale('it', ''),
-        Locale('it', 'IT'),
-        // Locale('ru', ''),
-      ],
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        useMaterial3: false
+    return SafeArea(
+      top: false,
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        routes: {
+          '/home': (context) => HomeScreen(),
+          // '/second': (context) => SecondScreen(),
+        },
+        navigatorObservers: [routeObserver],
+        navigatorKey: navigatorKey,
+        scaffoldMessengerKey: snackbarKey,
+        title: NureboAdmin.title,
+        // localizationsDelegates: GlobalMaterialLocalizations.delegates,
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          // Locale('en', ''),
+          // Locale('en', 'US'),
+          // Locale('zh', ''),
+          // Locale('he', ''),
+          // Locale('es', ''),
+          // Locale('it', ''),
+          Locale('it', 'IT'),
+          // Locale('ru', ''),
+        ],
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          useMaterial3: false
+        ),
+        home: /*isServerDown ? ServerDownScreen()
+          : */BusinessPreferences.getIsLogged() == true && isServerDown == false ? HomeScreen()
+          : BusinessPreferences.getIsLogged() == false && isServerDown == false ? LoginScreen()
+          : BusinessPreferences.getIsLogged() == null && isServerDown == false ? LoginScreen()
+          // : const Scaffold(backgroundColor: Colors.white,)
+          : const ServerDownScreen()
       ),
-      home: /*isServerDown ? ServerDownScreen()
-        : */BusinessPreferences.getIsLogged() == true && isServerDown == false ? HomeScreen()
-        : BusinessPreferences.getIsLogged() == false && isServerDown == false ? LoginScreen()
-        : BusinessPreferences.getIsLogged() == null && isServerDown == false ? LoginScreen()
-        // : const Scaffold(backgroundColor: Colors.white,)
-        : const ServerDownScreen()
     );
 
   }
