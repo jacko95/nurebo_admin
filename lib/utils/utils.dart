@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:nurebo_admin/main.dart';
 
 class Utils {
-  static final String httpServerUrl = "http://192.168.1.10:5000/";
+  static final String httpServerUrl = "http://192.168.1.13:5000/";
   // static const String httpServerUrl = "https://api.nurebo.com/";
   // static const String httpServerUrl = "https://clexira.online/";
   // static const String httpServerUrl = "https://dev.nurebo.com/";

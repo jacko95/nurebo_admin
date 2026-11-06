@@ -47,8 +47,15 @@ Permette di gestire in modo completo:
 ## 📸 Screenshot
 
 <div align="center">
-  <img src="docs/home-screen.png" alt="Admin Home Screen" width="300"/>
+  <img src="https://nurebo-public.s3.eu-central-1.amazonaws.com/images/unnamed (7).png" width="150"/>
+  <img src="https://nurebo-public.s3.eu-central-1.amazonaws.com/images/unnamed (8).png" width="150"/>
+  <img src="https://nurebo-public.s3.eu-central-1.amazonaws.com/images/unnamed (9).png" width="150"/>
+  <img src="https://nurebo-public.s3.eu-central-1.amazonaws.com/images/unnamed (10).png" width="150"/>
+  <img src="https://nurebo-public.s3.eu-central-1.amazonaws.com/images/unnamed (11).png" width="150"/>
+  <img src="https://nurebo-public.s3.eu-central-1.amazonaws.com/images/unnamed (12).png" width="150"/>
+  <img src="https://nurebo-public.s3.eu-central-1.amazonaws.com/images/unnamed (13).png" width="150"/>
 </div>
+
 
 
 ## 🛠 Tech Stack
